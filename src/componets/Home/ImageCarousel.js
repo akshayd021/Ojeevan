@@ -3,8 +3,10 @@ import Slider from "react-slick";
 import { Box } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useViewport from "../../Context/useViewPort";
 
 const ImageCarousel = () => {
+  const {isMobile} = useViewport()
   const settings = {
     dots: true,
     infinite: true,
@@ -33,7 +35,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <Box sx={{ width: 300, margin: "auto", overflow: "hidden" }}>
+    <Box sx={{ width: isMobile? '100%' : 300, margin: "auto", overflow: "hidden" }}>
       <Slider {...settings}>
         {images.map((img, index) => (
           <Box key={index} sx={{ display: "flex", justifyContent: "center" }}>

@@ -54,11 +54,15 @@ const Carousel = () => {
   return (
     <Slider {...settings}>
       {chips.map((chip, index) => (
-        <Box key={index} sx={{ padding: "0px" }}>
+        <Box key={index} sx={{ margin: "0px" }}>
           <Chip
             label={chip}
             sx={{
               fontSize: 14,
+              gap: 20,
+              maxWidth: 200,
+              width: "95%",
+              margin: " 0 10px",
               backgroundColor: "#fff",
               color: "#92288d",
               "&:hover": {
@@ -67,7 +71,6 @@ const Carousel = () => {
                 borderColor: "#fff",
                 border: "2px solid",
               },
-              margin: "2px",
             }}
           />
         </Box>

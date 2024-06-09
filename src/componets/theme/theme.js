@@ -1,20 +1,19 @@
-// src/theme.js
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#fff',
+      main: "#fff",
     },
     secondary: {
-      main: '#272262',
+      main: "#272262",
     },
     background: {
-      default: '#fff',
+      default: "#fff",
     },
   },
   typography: {
-    fontFamily: 'Ekatra, Arial, sans-serif',
+    fontFamily: "Ekatra, Arial, sans-serif",
   },
 });
 

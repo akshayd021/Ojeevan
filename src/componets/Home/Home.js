@@ -5,16 +5,25 @@ import Carousel from "./Carousel";
 import "../../styles/Home.css";
 import ImageCarousel from "./ImageCarousel";
 import AvtarCaursel from "./AvtarCarousel";
+import useViewport from "../../Context/useViewPort";
 
 const Home = () => {
+  const { isMobile } = useViewport();
+
   return (
-    <div className=" mt-50">
+    <div className={`${isMobile ? "mt-120" : "mt-200"}`}>
       <Grid container spacing={0}>
         <Grid item xl={6} md={6} xs={12}>
-          <Typography variant="h4" className="text-main pl-50">
+          <Typography
+            variant={`${isMobile ? "h6" : "h3"}`}
+            className={`text-main ${isMobile ? "pl-10" : "pl-50"} `}
+          >
             ઓ’જીવનમાં તમારું સ્વાગત છે.
           </Typography>
-          <Typography variant="body1" className="mt-10 pl-50">
+          <Typography
+            variant="body1"
+            className={`mt-10 ${isMobile ? "pl-10" : "pl-50"}`}
+          >
             ઓ’જીવન મૅગેઝિનની ડિજિટલ દુનિયામાં તમારું સ્વાગત છે. ડિજિટલ
             કન્ટેન્ટના રસથાળ ઉપરાંત અહીં તમને ઓ’જીવનની ઇવેન્ટ્સ, લાઇવ
             પ્રોગ્રામ્સ તથા મૅગેઝિન વિશેની માહિતી મળશે. ટૂંકા ગાળામાં લોકભોગ્ય
@@ -22,19 +31,19 @@ const Home = () => {
             અત્યારે ચોતરફથી કન્ટેન્ટ ઠલવાઈ રહ્યું છે, એવામાં, ક્વૉલિટી વાંચો,
             વંચાવો અને માણો..!
           </Typography>
-          <div className="slider mt-10">
+          <div className={`slider mt-10 ${isMobile ? "pl-10" : "pl-50"}`}>
             <Carousel />
           </div>
           <img
             src={Monuments}
             alt="Monuments"
-            width={1000}
-            height={600}
+            width={isMobile ? 400 : 1000}
+            height={isMobile ? 300 : 600}
             className="patel"
           />
         </Grid>
         <Grid item xl={6} md={6} sx={12}>
-          <div className="cloud mt-70">
+          <div className={`"cloud mt-70 ${isMobile && "center"}"`}>
             <ImageCarousel />
             <div className="silder-text center mt-10">
               <Typography
@@ -57,7 +66,7 @@ const Home = () => {
         </Grid>
       </Grid>
       <Divider sx={{ bgcolor: "rgb(242 146 27)", height: 10 }} />
-      <img src={design} alt="degin" height={50} />
+      <img src={design} alt="degin" height={50} width={"100%"} />
       <section>
         <div className="second center flex-col">
           <img src={word} alt="text" width={300} />
@@ -79,7 +88,7 @@ const Home = () => {
             ઓળખવામાં આવે છે.
           </Typography>
         </div>
-        <img src={design} alt="degin" height={50} />
+        <img src={design} alt="degin" height={50} width={"100%"} />
       </section>
       <section>
         <div className="blue">
@@ -88,17 +97,34 @@ const Home = () => {
           </Typography>
           <Grid container spacing={0}>
             <Grid item xl={6} md={6} xs={12} className="pl-50">
-              <img src={Charkho} alt="gif" width={500} />
+              <div style={{ marginBottom: isMobile ? "" : 40 }}>
+                <img
+                  src={Charkho}
+                  alt="gif"
+                  width={isMobile ? 300 : 500}
+                  className={`${isMobile ? "mt-20 mb-20" : ""}`}
+                />
+              </div>
             </Grid>
             <Grid item xl={6} md={6} xs={12}>
-              <Typography variant="h6" className="text-white mt-20">
-                <span className="text-green font-28 ">માણસ</span> થાકી જાય છે.
-                થાક એ બીજું કંઈ નહીં, પણ જિંદગીની સામે વ્યક્તિનાં પરાસ્ત થઈ
-                ગયાનો અદૃશ્ય સંકેત છે. રોજબરોજ એકધારું અને એકનું એક કામ! એમાંથી
-                છૂટકારો મળે ત્યાં બીજી કેટલીક સમસ્યાઓ ડોળા કાઢી ઊભી હોય. એની
-                સામે લડવા પણ કંઈક જોઈએ. કંઈક જ્ઞાનવર્ધક.
+              <Typography
+                variant={isMobile ? "body1" : "h6"}
+                className={`text-white mt-20 ${isMobile ? "mb-20" : ""}`}
+              >
+                <span
+                  className={`text-green ${isMobile ? "font-18" : "font-28"}`}
+                >
+                  માણસ
+                </span>
+                થાકી જાય છે. થાક એ બીજું કંઈ નહીં, પણ જિંદગીની સામે વ્યક્તિનાં
+                પરાસ્ત થઈ ગયાનો અદૃશ્ય સંકેત છે. રોજબરોજ એકધારું અને એકનું એક
+                કામ! એમાંથી છૂટકારો મળે ત્યાં બીજી કેટલીક સમસ્યાઓ ડોળા કાઢી ઊભી
+                હોય. એની સામે લડવા પણ કંઈક જોઈએ. કંઈક જ્ઞાનવર્ધક.
               </Typography>
-              <Typography variant="h6" className="text-white mt-20 ">
+              <Typography
+                variant={isMobile ? "body1" : "h6"}
+                className="text-white mt-20 "
+              >
                 ખરી માહિતી. પણ તે એવું કે, જેમાં મનોરંજનનોય સુમેળ સધાયો હોય. અને
                 એ પ્રેરણાનું પ્રવર્તમાન સરનામું ઓ’જીવન છે. એ તમારી સુષુપ્ત થઈ
                 ગયેલી ઊર્જાને ગદ્યના માધ્યમથી ધક્કો મારવાનું કાર્યં કરે છે. એ
@@ -111,8 +137,10 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div className="bg-green">
-          <div className="bg-white center pt-50 mt=50">
+        <div className="bg-green p-50">
+          <div
+            className={`bg-white center pt-50 ${isMobile ? "p-20" : "p-50"}`}
+          >
             <Typography variant="body1">
               આ કાળઝાળ સમયમાં સામયિક શરૂ કરવા બદલ તેમજ સામયિકના એક ઉત્તમ, બેનમૂન
               પ્રોડક્શન બદલ દિલથી અભિનંદન. અંકમાંથી પસાર થયો, ખાસ તો ‘આજીવન

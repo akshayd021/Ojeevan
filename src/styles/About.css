@@ -1,0 +1,41 @@
+.about {
+  color: #632b87;
+  font-weight: 700 !important;
+}
+.book {
+  object-fit: contain;
+  max-width: 100%;
+  position: relative;
+}
+.p-v {
+  padding: 10px 100px !important;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinning {
+  animation: spin 5s linear infinite;
+}
+.cliper {
+  position: absolute;
+  margin-top: -80px;
+  left: 00px;
+  z-index: 99;
+}
+.our-team {
+  color: #fff;
+  text-shadow: -1px -1px 0 #f2921b, 1px -1px 0 #f2921b, -1px 1px 0 #f2921b,
+    1px 1px 0 #f2921b;
+}

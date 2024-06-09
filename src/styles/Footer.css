@@ -1,39 +1,104 @@
-.bg-footer{
-    background: #272262;
-    padding:  30px 10px;
+.bg-footer {
+  background: #272262;
+  padding: 30px 10px;
+}
+.email-sec {
+  /* padding: 10px 50px; */
+  margin-right: 50px;
+  border-radius: 30px;
 }
 .email {
-padding: 10px 50px;
+  border-radius: 30px;
 }
-.nav{
-    gap: 10px;
-    color: #fff;
-  }
- 
-  .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; /* Added gap for spacing */
-  }
-  
-  .nav-item {
-    margin: 0 15px;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-item:hover {
-    color: black;
-  }
-  
-  .nav-item:hover::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 100%;
-    background-color: black;
-  }
+.nav {
+  gap: 10px;
+  float: right;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-item {
+  margin: 0 15px;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: black;
+}
+
+.nav-item:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+.customTextField .MuiOutlinedInput-root {
+  border-radius: 30px;
+  color: white;
+  height: 44px;
+  text-align: center;
+}
+.customTextField .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+.customTextField .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+  padding-left: 10px;
+}
+.customTextField
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+  padding-left: 10px;
+}
+.customTextField .MuiInputLabel-root {
+  color: white;
+  text-align: center;
+  padding-left: 10px;
+  margin-top: -5px;
+}
+.customTextField .MuiInputAdornment-root {
+  color: white;
+  text-align: center;
+}
+.customTextField .MuiIconButton-root {
+  color: white;
+  text-align: center;
+}
+.devider {
+  background-color: "#fff";
+  height: 2px;
+  width: 98%;
+  margin: 20px auto;
+}
+.footer-icon {
+  display: flex;
+  gap: 15px;
+  margin-left: 10px;
+}
+.location {
+  float: left;
+  color: white;
+  margin-right: 10px;
+}
+.location-text {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.last {
+  text-transform: uppercase;
+  font-size: 16px !important;
+}

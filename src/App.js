@@ -1,16 +1,19 @@
 import "./App.css";
-import { Footer, Home, Navbar, theme } from "./componets";
+import ViewportProvider from "./Context/ViewPortProvider";
+import { About, Footer, Home, Navbar, theme } from "./componets";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
   return (
-
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <ViewportProvider>
         <CssBaseline />
         <Navbar />
-        <Home />
+        {/* <Home /> */}
+        <About />
         <Footer />
-      </ThemeProvider>
+      </ViewportProvider>
+    </ThemeProvider>
   );
 }
 
